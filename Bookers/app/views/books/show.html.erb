@@ -1,12 +1,16 @@
-<p>
-	<strong>タイトル：</strong>
-	<%= @book.title %>
-</p>
-<p>
-	<strong>投稿内容：</strong>
-	<%= @book.body %>
-</p>
+<div class="show">
+   <p class="flash"><%= flash[:notice] %></p>
 
-<%= link_to '編集', edit_book_path(@book.id), class: 'edit_#{@book.id}' %>
-|
-<%= link_to '戻る', books_path,class: "back" %>
+   <p class="show">
+	   <strong>タイトル：</strong>
+	   <%= @book.title %>
+   </p>
+   <p class="show">
+	   <strong>投稿内容：</strong>
+	   <%= @book.body %>
+   </p>
+
+   <%= link_to '編集', edit_book_path(@book.id), class: 'edit_#{@book.id}' %>
+   |
+   <%= link_to '戻る', books_path,class: 'back' %>
+</div>

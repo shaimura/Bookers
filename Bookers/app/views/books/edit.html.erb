@@ -1,16 +1,17 @@
+<div class="edit">
 <h1>編集画面</h1>
 <%= form_for(@book) do |f| %>
 
 	<p>タイトル</p>
-	<%= f.text_field :title %>
+	<%= f.text_field :title, class: 'book_title' %>
 
 	<p>投稿内容</p>
-	<%= f.text_area :body %>
-	<P><%= f.submit '保存' %></P>
+	<%= f.text_area :body, class: 'book_body' %>
+	<P class="edit-book"><%= f.submit '更新' %></P>
 
 <% end %>
 
-<P><%= link_to '詳細', book_path(@book),class: 'show_#{f.id}' %>
+<%= link_to '詳細', book_path(@book),class: 'show_#{f.id}' %>
 |
-<%= link_to '戻る', books_path,class: "back" %>
-</P>
+<%= link_to '戻る', books_path,class: 'back' %>
+</div>
