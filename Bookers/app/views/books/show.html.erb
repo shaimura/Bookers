@@ -1,2 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<p>
+	<strong>タイトル：</strong>
+	<%= @book.title %>
+</p>
+<p>
+	<strong>投稿内容：</strong>
+	<%= @book.body %>
+</p>
+
+<%= link_to '編集', edit_book_path(@book.id), class: 'edit_#{@book.id}' %>
+|
+<%= link_to '戻る', books_path %>

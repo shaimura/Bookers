@@ -22,7 +22,7 @@
 	         	 <%= link_to '詳細', book_path(b),class: 'show_#{b.id}' %>
 	          </td>
 	          <td>
-	          	<%= link_to '編集', book_path(b), class: 'edit_#{b.id}' %>
+	          	<%= link_to '編集', edit_book_path(b), class: 'edit_#{b.id}' %>
 	          </td>
 	          <td>
 	          	<%= link_to '削除', book_path(b), method: :delete, data:{confirm:"本当に削除しますか？"}, class: 'destroy_#{b.id}' %>
