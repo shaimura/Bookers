@@ -1,4 +1,5 @@
 <div class="show">
+
    <p class="flash"><%= flash[:notice] %></p>
 
    <p class="show">
@@ -13,4 +14,5 @@
    <%= link_to '編集', edit_book_path(@book.id), class: 'edit_#{@book.id}' %>
    |
    <%= link_to '戻る', books_path,class: 'back' %>
+
 </div>

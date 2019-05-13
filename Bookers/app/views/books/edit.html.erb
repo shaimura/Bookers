@@ -1,4 +1,5 @@
 <div class="edit">
+
 <h1>編集画面</h1>
 <%= form_for(@book) do |f| %>
 
@@ -14,4 +15,5 @@
 <%= link_to '詳細', book_path(@book),class: 'show_#{f.id}' %>
 |
 <%= link_to '戻る', books_path,class: 'back' %>
+
 </div>
