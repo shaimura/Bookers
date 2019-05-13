@@ -17,13 +17,13 @@
 	    	      <%= b.body %>
 	          </td>
 	          <td class="table-show">
-	         	 <%= link_to '詳細', book_path(b),class: 'show_#{b.id}' %>
+	         	 <%= link_to '詳細', book_path(b),class: "show_#{b.id}" %>
 	          </td>
 	          <td class="table-edit">
-	          	<%= link_to '編集', edit_book_path(b), class: 'edit_#{b.id}' %>
+	          	<%= link_to '編集', edit_book_path(b), class: "edit_#{b.id}" %>
 	          </td>
 	          <td class="table-destroy">
-	          	<%= link_to '削除', book_path(b), method: :delete, data:{confirm:"本当に削除しますか？"}, class: 'destroy_#{b.id}' %>
+	          	<%= link_to '削除', book_path(b), method: :delete, data:{confirm:"本当に削除しますか？"}, class: "destroy_#{b.id}" %>
 	          </td>
 	         </tr>
 	        <% end %>
@@ -35,9 +35,9 @@
 		<%= form_for(@book) do |f| %>
 
 		<h4 class="new-book">タイトル</h4>
-		<%= f.text_field :title, class: 'book_title' %>
+		<%= f.text_field :title, class: "book_title" %>
 		<h4 class="new-book">投稿内容</h4>
-		<%= f.text_area :body, class: 'book_body' %>
+		<%= f.text_area :body, class: "book_body" %>
 		<h4 class="new-book"><%= f.submit "投稿" %></h4>
 		<% end %>
 	</section>
